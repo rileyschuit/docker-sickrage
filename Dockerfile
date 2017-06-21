@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM hypriot/rpi-alpine
 MAINTAINER tim@haak.co
 
 ENV LANG='en_US.UTF-8' \
