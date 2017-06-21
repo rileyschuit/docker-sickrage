@@ -7,11 +7,3 @@ script:
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 # build image
 - docker build -t rileyschuit/rpi-docker-sickrage .
-# test image
-#- docker run rileyschuit/rpi-docker-sickrage ps -ef | grep SABnzbd.py
-# push image
-- >
-  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-    docker login -u="rileyschuit" -p="$DOCKER_PASS"
-    docker push rileyschuit/rpi-docker-sickrage
-  fi

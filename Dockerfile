@@ -1,6 +1,8 @@
 FROM hypriot/rpi-alpine
 MAINTAINER tim@haak.co
 
+RUN [ "cross-build-start" ]
+
 ENV LANG='en_US.UTF-8' \
     LANGUAGE='en_US.UTF-8' \
     TERM='xterm'
@@ -26,3 +28,5 @@ VOLUME ["/config", "/data", "/cache"]
 EXPOSE 8081
 
 CMD ["/start.sh"]
+
+RUN [ "cross-build-end" ]
