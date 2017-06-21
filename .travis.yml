@@ -13,5 +13,5 @@ script:
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="rileyschuit" -p="$DOCKER_PASS"
-    docker push rileyschuit/rpi-docker-sabnzbd
+    docker push rileyschuit/rpi-docker-sickrage
   fi
